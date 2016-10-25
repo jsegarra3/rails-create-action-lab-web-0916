@@ -12,7 +12,7 @@ describe StudentsController do
 
       it "redirects to the new student" do
         post :create, { :first_name => "Sam", :last_name => "Smith" }
-        expect(response).to redirect_to Student.last
+        expect(response).to redirect_to students_path(Student.last)
       end
     end
   end
